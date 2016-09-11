@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en us">
+<head>
+
+    {% block head_meta %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% endblock head_meta %}
+    {% block custom_meta %}
+    {% endblock custom_meta %}
+    <title>{% block title %}SimonMemoryGame{% endblock title %}</title>
+
+
+    {% block head_styles %}
+    {% endblock head_styles %}
+</head>
+
+
+
+
+<body>
+    {% block header %}
+    {% endblock header %}
+    {% block content %}
+    {% endblock content %}
+    {% block footer %}
+    {% endblock footer %}
+
+    {% block scripts %}
+    </script>
+    {% endblock scripts %}
+</body>
+
+</html>
+
+
