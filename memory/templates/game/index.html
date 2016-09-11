@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block head_scripts %}
+
+{% endblock head_scripts %}
+{% block content %}
+<div id= scorepanel>
+    <p id = score></p>
+</div>
+<div id="locator">
+ <input type="button" name="clickMe" id="wooYayButton" value="QUIT"
+                                                             onclick="loadDoc()"/>
+
+</div>
+{% endblock content %}
+{% block scripts %}
+
+<script>
+
+
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("score").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "assets/test.txt", true);
+  xhttp.send();
+}
+</script>
+{% endblock scripts %}
+

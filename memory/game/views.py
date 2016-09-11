@@ -8,6 +8,6 @@ from django.http import HttpResponse
 from raspicode import code
 
 class Index(View):
-        template_name = 'index.html'
+        template_name = 'game/index.html'
         def get(self, request, *args, **kwargs):
             return render(request, self.template_name,)
