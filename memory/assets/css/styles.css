@@ -5,10 +5,13 @@ html {
       -o-background-size: cover;
         background-size: cover;
     }
-#locator { position: absolute; visibility: visible; left: 160px; top: 
-    730px; z-index: 200;}
+#locator { position: absolute; visibility: visible;
+    left: 160px; top:730px; z-index: 200;}
 
-#scorepanel {position: absolute; visibility: visible; left: 325px; top: -50px; z-index: 200;
+#locator2 { position: absolute; visibility: visible; 
+    left: 255px; top:730px; z-index: 200;}
+#scorepanel {position: absolute; visibility: visible; 
+    left: 325px; top: -50px; z-index: 200;
 }
  #wooYayButton{   font-family: Impact;
             font-size: 49px;

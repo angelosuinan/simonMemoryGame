@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block head_scripts %}
+
+{% endblock head_scripts %}
+{% block content %}
+<div id= scorepanel>
+        <p id = score></p>
+</div>
+<div id="locator">
+    <a href= "{% url 'game:index' %}">
+        <input type="button" name="clickMe" id="wooYayButton" value="PRESS START"
+        onclick="loadDoc()"/></a>
+
+</div>
+{% endblock content %}
