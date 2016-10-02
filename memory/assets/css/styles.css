@@ -1,5 +1,5 @@
 html { 
-      background: url(bg.png) no-repeat center center fixed; 
+      background: url(aa.png) no-repeat; 
   -webkit-background-size: cover;
     -moz-background-size: cover;
       -o-background-size: cover;
@@ -11,8 +11,10 @@ html {
 #locator2 { position: absolute; visibility: visible; 
     left: 255px; top:730px; z-index: 200;}
 #scorepanel {position: absolute; visibility: visible; 
-    left: 325px; top: -50px; z-index: 200;
+    left: 375px; top: 275px; z-index: 200;
 }
+#highpanel {position: absolute; visibility: visible;
+     left: 615px; top: 10px; z-index: 200;}
  #wooYayButton{   font-family: Impact;
             font-size: 49px;
                 font-style: italic;
@@ -27,16 +29,17 @@ html {
                         outline:none;
                         color: white;
                         }
+#high {font-family: Impact;
+              font-size: 100px;
+                   font-style: italic;
+                        font-variant: small-caps;
+                             font-weight: bold;
+                      border: none;
+                  }
 #score {font-family: Impact;
-        font-size: 200px;
+        font-size: 300px;
             font-style: italic;
                 font-variant: small-caps;
                     font-weight: bold;
-                        
-    background-color: Transparent;
-        background-repeat:no-repeat;
             border: none;
-                cursor:pointer;
-                    overflow: hidden;
-                        outline:none;
-                        color:white;
+                cursor:pointer;}

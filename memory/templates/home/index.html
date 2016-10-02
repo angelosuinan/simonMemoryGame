@@ -1,15 +1,45 @@
 {% extends "base.html" %}
-{% block head_scripts %}
+{% block custom_scripts %}
+<script type="text/javascript">
+var interval =0;
+function onstart(){
+interval = setInterval ( "loadDoc()", 100 );
+}
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            if (Math.random() >.5)
+            {
+              document.getElementById("score").innerHTML = this.responseText;
+            }else{
+            }
+                  }
+                    };
+    xhttp.open("GET", "assets/test.txt", true);
+    xhttp.send();
+var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        if (Math.random() >.5)
+                        {
+                document.getElementById("high").innerHTML = this.responseText;
+            }else{
+              }
+    }
+    };
+    xhttp.open("GET", "assets/high.txt", true);
+    xhttp.send();
+                        }
 
-{% endblock head_scripts %}
+window.onload = onstart()
+</script>
+{% endblock custom_scripts %}
 {% block content %}
 <div id= scorepanel>
-        <p id = score></p>
+    <p align= "center" id = score></p>
 </div>
-<div id="locator">
-    <a href= "{% url 'game:index' %}">
-        <input type="button" name="clickMe" id="wooYayButton" value="PRESS START"
-        onclick="loadDoc()"/></a>
-
+<div id= highpanel>
+    <p align = "center" id = high></p>
 </div>
 {% endblock content %}
